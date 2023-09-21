@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@capacitor/android':
+    specifier: ^5.4.0
+    version: 5.4.0(@capacitor/core@5.4.0)
   '@capacitor/core':
     specifier: ^5.4.0
     version: 5.4.0
@@ -15,10 +18,10 @@ dependencies:
     specifier: ^7.4.1
     version: 7.4.1(react-dom@18.2.0)(react-router-dom@5.3.4)(react-router@5.3.4)(react@18.2.0)
   '@types/react-router':
-    specifier: '5'
+    specifier: ^5.1.20
     version: 5.1.20
   '@types/react-router-dom':
-    specifier: '5'
+    specifier: ^5.3.3
     version: 5.3.3
   react:
     specifier: ^18.2.0
@@ -305,6 +308,14 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
     dev: true
+
+  /@capacitor/android@5.4.0(@capacitor/core@5.4.0):
+    resolution: {integrity: sha512-CTIyFpndki9fW4q0h8jqUCjn2653rL/QrBwyPDEt7YaoUN6umSTZQlVgu8YlWVL5A1RgMEdN10XwDHnyfDt0ZQ==}
+    peerDependencies:
+      '@capacitor/core': ^5.4.0
+    dependencies:
+      '@capacitor/core': 5.4.0
+    dev: false
 
   /@capacitor/cli@5.4.0:
     resolution: {integrity: sha512-cLcicNwReiEN5CrVREWz0ntSed0WQ187tk5oazgIHpgD8pDoFBQzqdGXbb/l18LC7/hpNh9TG0OyA/zKMZKVQQ==}
