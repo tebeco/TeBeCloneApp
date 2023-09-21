@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.tebeclone.app",
+      "sha256_cert_fingerprints": [
+        "95:A1:1F:8C:1C:AF:A0:15:4C:17:A1:3C:8B:9C:BC:35:94:F2:FA:A0:A2:74:4A:3D:18:00:11:C5:36:07:3A:5B"
+      ]
+    }
+  }
+]
