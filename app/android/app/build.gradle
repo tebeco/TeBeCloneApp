@@ -1,6 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('../../debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+        }
+    }
     namespace "com.tebeclone.app"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
