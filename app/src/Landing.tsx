@@ -1,6 +1,7 @@
 import { Capacitor } from '@capacitor/core';
 import { Browser } from '@capacitor/browser';
-import { useHistory } from 'react-router';
+import { Redirect, useHistory } from 'react-router';
+import { useSessionContext } from './contexts/SessionContext';
 
 type THistory<T = unknown> = ReturnType<typeof useHistory<T>>
 
@@ -26,11 +27,14 @@ const openSignInSite = async (history: THistory) => {
 };
 
 export const Landing = () => {
+  const [context] = useSessionContext();
   const history = useHistory();
 
-  return (
-    <div className="card">
-      <button onClick={async () => openSignInSite(history)}>Sign In</button>
-    </div>
-  )
+  return (context.userName)
+    ? (<Redirect to="/home" />)
+    : (
+      <div className="card">
+        <button onClick={async () => openSignInSite(history)}>Sign In</button>
+      </div>
+    )
 }
